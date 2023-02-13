@@ -1,0 +1,4 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+directory filter=lfs diff=lfs merge=lfs -text
+PA1/** filter=lfs diff=lfs merge=lfs -text
