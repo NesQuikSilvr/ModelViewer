@@ -64,18 +64,6 @@ bool Animation::load(Tokenizer& tokenizer) {
 
 			newChannel->keys.push_back(newKey);
 		}
-
-		/*
-		if (newChannel->keys.size() > 1) {
-			Key* key;
-			for (int j = 1; j < newChannel->keys.size() - 1; j++) {
-				key = newChannel->keys[j];
-				key->prev = newChannel->keys[j - 1];
-				key->next = newChannel->keys[j + 1];
-			}
-			newChannel->keys[0]->next = newChannel->keys[1];
-			newChannel->keys[newChannel->keys.size() - 1]->prev = newChannel->keys[newChannel->keys.size() - 2];
-		}*/
 	}
 	
 	tokenizer.Close();
@@ -86,9 +74,5 @@ bool Animation::load(Tokenizer& tokenizer) {
 /* Based on time elapsed, update Joint poses corresponding to values in DOF Channel */
 void Animation::update(float time) {
 	//Evaluate the current DOF value from each Channel
-	int idx = 6;
-	float testtime = 1.833333;
-	//for (int i = 0; i < channels.size(); i++) {
-		std::cout << "Channel: " << idx << ", " << channels[idx]->eval(testtime) << std::endl;
-	//}
+	
 }
