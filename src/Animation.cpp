@@ -74,5 +74,5 @@ bool Animation::load(Tokenizer& tokenizer) {
 /* Based on time elapsed, update Joint poses corresponding to values in DOF Channel */
 void Animation::update(float time) {
 	//Evaluate the current DOF value from each Channel
-	
+	//Apply the DOF value to the corresponding Joint in the Skeleton
 }

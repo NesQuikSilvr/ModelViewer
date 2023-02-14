@@ -52,13 +52,13 @@ float Channel::eval(float time) {
 	else { return temp->value; }
 	
 
-	//Time is before first keyframe
+	//Time is before first keyframe, use Channel extrap_in
 	if (prev == NULL) {
 
 		return -6.9;
 	}
 
-	//Time is after last keyframe
+	//Time is after last keyframe, use Channel extrap_out
 	if (next == NULL) {
 
 		return 6.9;
